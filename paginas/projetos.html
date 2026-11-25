@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Conheça o Radar de Licitações Ambientais, o monitor de gasolina, o dashboard Gatito Petshop e o RPG Echoes of Corruption.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:title" content="Projetos | Luis Gustavo">
+    <meta property="og:description" content="Conheça o Radar de Licitações Ambientais, o monitor de gasolina, o dashboard Gatito Petshop e o RPG Echoes of Corruption.">
+    <title>Projetos | Luis Gustavo</title>
+    <!-- Bootstrap apenas para o grid. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- Os links do menu abrem páginas HTML da mesma pasta. -->
+    <header class="cabecalho">
+        <div class="container barra">
+            <a class="marca" href="../index.html">Luis Gustavo</a>
+            <nav aria-label="Navegação principal">
+                <ul class="menu">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="projetos.html" aria-current="page">Projetos</a></li>
+                    <li><a href="conhecimentos.html">Tecnologias</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="botao-tema" id="botao-tema" type="button">Tema claro</button>
+        </div>
+    </header>
+
+    <main class="container pagina pagina-projetos" id="conteudo" tabindex="-1">
+        <h1>Projetos</h1>
+        <div class="lista-projetos" id="lista-projetos"></div>
+        <noscript><p>Ative o JavaScript para ver os projetos e as imagens.</p></noscript>
+
+        <!-- O script usa este modelo para montar cada projeto e sua galeria. -->
+        <template id="modelo-projeto">
+            <article class="projeto">
+                <header class="projeto-cabecalho">
+                    <h2 class="projeto-titulo"></h2>
+                    <p class="projeto-problema"></p>
+                    <p class="projeto-resultado"></p>
+                    <div class="projeto-meta">
+                        <ul class="tecnologias projeto-stack" aria-label="Tecnologias usadas"></ul>
+                        <a class="projeto-link link-texto oculto" target="_blank" rel="noopener">Ver repositório no GitHub</a>
+                    </div>
+                </header>
+
+                <div class="projeto-visual oculto">
+                    <figure class="captura">
+                        <div class="captura-imagem">
+                            <img alt="" loading="lazy">
+                        </div>
+                        <figcaption>
+                            <p class="captura-legenda" aria-live="polite"></p>
+                            <div class="captura-acoes">
+                                <a class="captura-link" target="_blank" rel="noopener">Ampliar imagem</a>
+                                <div class="galeria-navegacao oculto" role="group">
+                                    <button class="botao galeria-anterior" type="button">Anterior</button>
+                                    <button class="botao galeria-proxima" type="button">Próxima</button>
+                                </div>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <section class="projeto-fluxo oculto">
+                    <h3>Do PNCP à planilha</h3>
+                    <ol class="projeto-etapas"></ol>
+                </section>
+
+                <button class="botao botao-detalhes" type="button" aria-expanded="false">Ver detalhes</button>
+                <div class="projeto-detalhes oculto">
+                    <p class="projeto-descricao"></p>
+                </div>
+            </article>
+        </template>
+    </main>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>© 2026 Luis Gustavo Gonçalves dos Santos</p>
+        </div>
+    </footer>
+</body>
+</html>
